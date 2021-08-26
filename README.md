@@ -8,3 +8,5 @@ You can see it in action here: http://home.christin-loehner.de
 **Screenshot**
 
 ![Screenshot](https://raw.githubusercontent.com/christinloehner/rebuntu/main/img/ubuntu-im-browser-01.png)
+
+![Screenshot](https://raw.githubusercontent.com/christinloehner/rebuntu/main/img/ubuntu-im-browser-02.png)
