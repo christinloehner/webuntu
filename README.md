@@ -1,4 +1,4 @@
-# rebuntu
+# webuntu
 My private try to create a ubuntu like website with plain JS (without react or something)
 
 *This is highly work in progress!* Please don't fork yet
