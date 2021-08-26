@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+body {
+  background-image: url(/img/backgrounds/0.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: fixed;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  font-family: 'Ubuntu';
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.dash_icons {
+    z-index: 9997!important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px;
+    padding-top: 30px;
+    width: 70px;
+    background: rgb(34,5,34);
+    background: linear-gradient(90deg, rgba(34,5,34,0.596796218487395) 0%, rgba(25,3,25,0.5491771708683473) 100%);
+    height: calc(100% - 30px);
+}
+.dash_icon {
+    width: 53px;
+    height: 50px;
+    z-index: 9998;
+    float: left;
+    padding: 8px;
+    clear: both;
+    cursor: pointer;
+}
+.dash_icon:hover {
+    background-color: #562434;
+}
+.desktop_icons {
+    position: absolute;
+    top: 0;
+    left: 85px;
+    z-index: 0;
+    padding-top: 40px;
+    width: 100px;
+    background: transparent;
+    height: calc(100% - 40px);
+    text-align: center;
+}
+.desktop_icon {
+    width: 100%;
+    height: 110px;
+    z-index: 1;
+    float: left;
+    margin: auto;
+    clear: both;
+    cursor: pointer;
+    text-align: center;
+}
+.desktop_icon .icon_image {
+    width: 55px;
+    height: 55px;
+    margin: auto;
+}
+.dash_icon .icon_image {
+    width: 45px;
+    height: 45px;
+    margin: auto;
+}
+.icon_text {
+    display: none;
+    color: white;
+    text-align: center;
+}
+.desktop_icon_text {
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    text-shadow: 2px 2px black;
+}
+.dash_icon.icon_points {
+    bottom: 0!important;
+    position: fixed;
+}
+#desktop, .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 2;
+}
+.Terminal, .window {
+    width: 800px;
+    height: 400px;
+    box-shadow: 5px 8px 10px rgb(0 0 0 / 80%);
+    z-index: 3;
+}
+.Terminal__Toolbar, .titlebar {
+  background: linear-gradient(#504b45 0%,#3c3b37 100%);
+  width: 100%;
+  padding: 0 8px;
+  box-sizing: border-box;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.Toolbar__buttons, .controls {
+  display: flex;
+  align-items: center;
+}
+.Toolbar__button, .controlbutton {
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 0;
+  font-size: 7px;
+  background: linear-gradient(#7d7871 0%, #595953 100%);
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.2);
+  box-shadow: 0px 0px 1px 0px #41403A,0px 1px 1px 0px #474642;
+  border: none;
+  margin-right: 4px;
+
+}
+.Toolbar__button:hover, .controlbutton:hover {
+  cursor: pointer;
+}
+.Toolbar__button--exit, .exit {
+  background: #f25d2b;
+  background: linear-gradient(#f37458 0%, #de4c12 100%);
+  background-clip: padding-box;
+}
+.Toolbar__button:focus, .controlbutton:focus {
+  outline: none;
+}
+.Toolbar__user, .title {
+  color: #d5d0ce;
+  margin-left: 4px;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 1px;
+}
+p.Toolbar__user, .title {
+    margin-top: 2px;
+}
+.Terminal__body, .body {
+    background: rgba(56, 4, 40, .9);
+    height: calc(100% - 25px);
+    margin-top: -1px;
+    padding-top: 2px;
+    font-family: 'Ubuntu mono';
+    opacity: 0.75;
+    border: 1px solid black;
+    z-index: 4;
+    color: #313131;
+}
+.text {
+    background-color: white;
+    padding: 10px;
+}
+.Terminal__text, .terminal {
+    padding: 5px;
+    width: calc(100% - 10px);
+    height: 97%;
+    overflow-y: scroll;
+}
+.Terminal__white {
+    color: #222;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.Terminal__Prompt, .terminalprompt {
+  margin-top: 10px;
+  display: flex;
+}
+.Terminal__text strong, .terminal strong {
+    color: #fff;
+}
+.Prompt__user, .user {
+  color: #87d441;
+}
+.Prompt__location, .location {
+  color: #6d85a9;
+}
+.Prompt__dollar, .dollar {
+  color: #ddd;
+}
+.Prompt__cursor, .cursor {
+  height: 17px;
+  width: 8px;
+  background: white;
+  display: block;
+  margin-left: 8px;
+  animation: 500ms ease infinite alternate blink;
+}
+span.welcome {
+    color: white;
+    margin-left: 8px;
+}
+#terminal, .window {
+    position: absolute!important;
+    z-index: 9;
+}
+#dialog {
+  position: absolute;
+  z-index: 9;
+}
+.Dialog__Toolbar {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+}
+#topbar {
+    left: 0;
+    top: 0;
+    height: 25px;
+    position: fixed;
+    z-index: 9999!important;
+    width: 100%;
+    text-align: right;
+    color: #dedede;
+    text-shadow: 2px 2px 2px #000;
+    background-color: #000;
+    box-shadow: -2px -2px 8px #000000ad;
+}
+div#topleft {
+    float: left;
+    font-size: 0.9rem;
+    padding-left: 20px;
+}
+div#topmiddle {
+    float: none;
+    margin: auto;
+    position: absolute;
+    width: calc(100% - 0%);
+    text-align: center;
+    font-size: 0.9rem;
+}
+div#topright {
+    right: 20px;
+    position: fixed;
+    font-size: 0.9rem;
+    width: 130px;
+    text-align: right;
+}
+div#topbar > div {
+    padding-top: 4px;
+}
+div#topright {
+    margin-top: 2px;
+}
+svg.svg-inline--fa {
+    margin-left: 8px;
+}
+div#copyright {
+    position: fixed;
+    z-index: 9999;
+    bottom: 10px;
+    right: 10px;
+    color: #b1b1b1;
+    font-size: 0.7rem;
+}
+div#copyright > a {
+    color: #b1b1b1;
+    text-decoration: underline;
+}
+div.active {
+    background-color: #705c53 !important;
+}
+div.minimized {
+    background: transparent!important;
+}
+div.active:before {
+    position: absolute;
+    content: "•";
+    color: #ff6743;
+    margin-top: 12px;
+    left: 5px;
+    margin-right: 5px;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+.hidden {
+    display: none;
+}
+.shown {
+    display: block!important;
+}
+.focus {
+    z-index: 10;
+}
+.maximized {
+    top: 25px!important;
+    left: 70px!important;
+    width: calc(100% - 70px)!important;
+    height: calc(100% - 20px)!important;
+}
+.maximized .terminal {
+    width: calc(100% - 10px);
+}
+.black, .black strong {
+    color: #000!important;
+}
+span#dockclock {
+    cursor: pointer;
+    display: block;
+    width: 160px;
+    margin: auto;
+    height: 100%;
+}
+div#dockclockwindow {
+    z-index: 99999;
+    display: none;
+    width: 700px;
+    height: 390px;
+    border-radius: 15px;
+    border: 1px solid black;
+    margin-top: 10px!important;
+    margin: auto;
+    box-shadow: 4px 4px 8px black;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    backdrop-filter: blur(5px);
+}
+.color-calendar.glass .calendar__body {
+    padding: 18px 14px;
+    border-radius: var(--cal-border-radius);
+    background-color: rgba(0,0,0, 0.2);
+}
+.color-calendar.glass {
+    --cal-header-background-color: rgba(0, 0, 0, 0.1)!important;
+    color: #adadad!important;
+}
+.impressum{
+    cursor:pointer;
+    text-decoration:underline;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 800px) {
+  .Terminal {
+    width: 95%;
+  }
+}
+@media (max-height: 420px) {
+  .Terminal {
+    max-height: 90%;
+  }
+}
