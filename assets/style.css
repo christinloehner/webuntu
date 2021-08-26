@@ -305,8 +305,8 @@ div.active:before {
 }
 .maximized {
     top: 25px!important;
-    left: 70px!important;
-    width: calc(100% - 70px)!important;
+    left: 79px!important;
+    width: calc(100% - 79px)!important;
     height: calc(100% - 20px)!important;
 }
 .maximized .terminal {
