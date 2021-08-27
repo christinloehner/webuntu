@@ -24,7 +24,7 @@ $( document ).ready(function() {
             $('#desktop').append($(newwindow).draggable());
             $('#'+iconid).addClass('active');
         } else {
-            $('#'+windowid).toggle('fast');
+            $('#'+windowid).toggle('slow');
             $('#'+iconid).toggleClass('minimized');
         }
     });
@@ -45,7 +45,7 @@ $( document ).ready(function() {
             $('#desktop').append($(newwindow).draggable());
             $('#'+iconid).addClass('active');
         } else {
-            $('#'+windowid).toggle('fast');
+            $('#'+windowid).toggle('slow');
             $('#'+iconid).toggleClass('minimized');
         }
     });
@@ -65,7 +65,7 @@ $( document ).ready(function() {
             $('#desktop').append($(newwindow).draggable());
             $('#'+iconid).addClass('active');
         } else {
-            $('#'+windowid).toggle('fast');
+            $('#'+windowid).toggle('slow');
             $('#'+iconid).toggleClass('minimized');
         }
     });
@@ -85,7 +85,7 @@ $( document ).ready(function() {
             $('#desktop').append($(newwindow).draggable());
             $('#'+iconid).addClass('active');
         } else {
-            $('#'+windowid).toggle('fast');
+            $('#'+windowid).toggle('slow');
             $('#'+iconid).toggleClass('minimized');
         }
     });
@@ -105,7 +105,7 @@ $( document ).ready(function() {
             $('#desktop').append($(newwindow).draggable());
             $('#'+iconid).addClass('active');
         } else {
-            $('#'+windowid).toggle('fast');
+            $('#'+windowid).toggle('slow');
             $('#'+iconid).toggleClass('minimized');
         }
     });
@@ -133,9 +133,9 @@ $( document ).ready(function() {
     });
     $( "#dockclock" ).click(function() {
         if($("#dockclockwindow").is(":visible")) {
-            $('#dockclockwindow').fadeOut('fast');
+            $('#dockclockwindow').fadeOut('slow');
         } else {
-            $('#dockclockwindow').fadeIn('fast');
+            $('#dockclockwindow').fadeIn('slow');
         }
     });
     var mouse_is_inside = false;
@@ -145,7 +145,7 @@ $( document ).ready(function() {
         mouse_is_inside=false;
     });
     $("body").mouseup(function(){
-        if(!mouse_is_inside) $('#dockclockwindow').fadeOut('fast');
+        if(!mouse_is_inside) $('#dockclockwindow').fadeOut('slow');
     });
 
     $('body').on('click', '.window', function() {
