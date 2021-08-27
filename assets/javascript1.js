@@ -122,6 +122,15 @@ $( document ).ready(function() {
 
 ///////////////////////////////////////////////////////////////////////////////
 
+    $(document).on("mouseup", "html", function(event) {
+        event.preventDefault();
+    });
+    $(document).on("mouseup", "body", function(event) {
+        event.preventDefault();
+    });
+    $(document).on("mouseup", "#desktop", function(event) {
+        event.preventDefault();
+    });
     $( ".icon_email" ).click(function() {
         window.location.href = "email.php";
     });
@@ -189,6 +198,12 @@ $( document ).ready(function() {
         $(this).parent().parent().parent().css("top", "");
         $(this).parent().parent().parent().css("left", "");
         $(this).parent().parent().parent().toggleClass('maximized');
+    });
+    $(document).on("contextmenu", ".dash_icons", function(event) {
+        event.preventDefault();
+    });
+    $(document).on("contextmenu", "#topbar", function(event) {
+        event.preventDefault();
     });
     $(document).on("contextmenu", "#desktop", function(event) {
         event.preventDefault();

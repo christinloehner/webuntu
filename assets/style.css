@@ -368,6 +368,11 @@ div#dockclockwindow {
     padding-left: 35px;
     font-size: 0.9rem;
     padding-right: 20px;
+    padding-bottom: 0px;
+}
+#context > ul > li.line {
+    line-height: 2px;
+    height: 4px;
 }
 #context > ul > li.line hr {
     border: 0;
