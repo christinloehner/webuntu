@@ -16,3 +16,20 @@
     <title>webuntu - An Ubuntu 21.04 Simulator</title>
 </head>
 <body>
+<div id="context">
+	<ul>
+		<li class="item">Neuer Ordner</li>
+		<li class="line"><hr class="context"/></li>
+		<li class="item inactive">Einfügen</li>
+		<li class="line"><hr class="context"/></li>
+		<li class="item">Alle auswählen</li>
+		<li class="line"><hr class="context"/></li>
+		<li class="item">Schreibtisch in Dateiverwaltung öffnen</li>
+		<li class="item">Im Terminal öffnen</li>
+		<li class="line"><hr class="context"/></li>
+		<li class="item">Hintergrund ändern...</li>
+		<li class="line"><hr class="context"/></li>
+		<li class="item">Anzeigeeinstellungen</li>
+		<li class="item">Einstellungen</li>
+	</ul>
+</div>

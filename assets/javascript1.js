@@ -190,5 +190,23 @@ $( document ).ready(function() {
         $(this).parent().parent().parent().css("left", "");
         $(this).parent().parent().parent().toggleClass('maximized');
     });
+    $(document).on("contextmenu", "#desktop", function(event) {
+        event.preventDefault();
+        if($("#context").is(":visible")) {
+            $('#context').hide();
+        } else {
+            $("#context").css({left:event.pageX, top:event.pageY});
+            $('#context').show();
+        }
+        event.preventDefault();
+    });
+    var mouse_is_inside_context = false;
+    $('#context').hover(function(){
+        mouse_is_inside_context=true;
+    }, function(){
+        mouse_is_inside_context=false;
+    });
+    $("body").mouseup(function(){
+        if(!mouse_is_inside_context) $('#context').hide();
+    });
 });
-

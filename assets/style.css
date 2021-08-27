@@ -349,6 +349,39 @@ div#dockclockwindow {
     cursor:pointer;
     text-decoration:underline;
 }
+#context {
+    display: none;
+    position: absolute;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    box-shadow: 3px 3px 5px black;
+    border-radius: 4px;
+}
+#context > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#context > ul > li.item {
+    padding: 2px;
+    padding-left: 35px;
+    font-size: 0.9rem;
+    padding-right: 20px;
+}
+#context > ul > li.line hr {
+    border: 0;
+    border-top: 1px solid #d8d8d8;
+}
+#context > ul > li.item:first-of-type {
+    padding-top:10px;
+}
+#context > ul > li.item:last-of-type {
+    padding-bottom:10px;
+}
+li.item.inactive {
+    color: #afafaf;
+}
 @keyframes blink {
   0% {
     opacity: 0;
