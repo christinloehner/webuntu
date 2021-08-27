@@ -20,9 +20,6 @@ function openWindow (title, id, icon, cssclass, content, positions, counter) {
 
 $( document ).ready(function() {
 
-    $( ".icon_email" ).click(function() {
-        window.location.href = "email.php";
-    });
     $( ".icon_points" ).click(function() {
         window.location.href = "/";
     });
@@ -57,6 +54,7 @@ $( document ).ready(function() {
         if (myid == 'camswindow') { var iconid = 'camsicon'; }
         if (myid == 'statuswindow') { var iconid = 'statusicon'; }
         if (myid == 'impwindow') { var iconid = 'impicon'; }
+        if (myid == 'emailwindow') { var iconid = 'emailicon'; }
         $('#'+myid).fadeOut('slow');
         $("#minimized").removeClass('hidden');
         $("#minimized").addClass('shown');
@@ -79,6 +77,7 @@ $( document ).ready(function() {
         if (myid == 'camswindow') { c_cams = 0; var iconid = 'camsicon'; }
         if (myid == 'statuswindow') { c_status = 0; var iconid = 'statusicon'; }
         if (myid == 'impwindow') { c_imp = 0; var iconid = 'impicon'; }
+        if (myid == 'emailwindow') { c_email = 0; var iconid = 'emailicon'; }
         $('#'+myid).fadeOut('slow');
         $('#'+myid).remove();
         $('#'+iconid).removeClass('active');

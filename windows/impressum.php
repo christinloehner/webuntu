@@ -1,6 +1,5 @@
 <?php
 $window_title		=	'Impressum';
-$window_handle		=	'.impressum';
 $window_class		=	'impwindow';
 $window_icon		=	'impicon';
 $window_type		=	'text';
@@ -32,7 +31,7 @@ $window_content = preg_replace( "/\s\s+/", " ", $window_content);
 ?><script>
     var c_imp = 0;
     $( document ).ready(function() {
-        $("<?php echo $window_handle; ?>").click(function() {
+        $(".impressum").click(function() {
             c_imp = openWindow('<?php echo $window_title; ?>', '<?php echo $window_class; ?>', '<?php echo $window_icon; ?>', '<?php echo $window_type; ?>', '<?php echo $window_content; ?>', positions, c_imp);
         });
     });

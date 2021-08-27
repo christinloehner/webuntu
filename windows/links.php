@@ -1,6 +1,5 @@
 <?php
 $window_title		=	'Links und Projekte';
-$window_handle		=	'.icon_links';
 $window_class		=	'linkswindow';
 $window_icon		=	'linksicon';
 $window_type		=	'bash';
@@ -24,7 +23,7 @@ $window_content = preg_replace( "/\s\s+/", " ", $window_content);
 ?><script>
     var c_links = 0;
     $( document ).ready(function() {
-        $("<?php echo $window_handle; ?>").click(function() {
+        $("#<?php echo $window_icon; ?>").click(function() {
             c_links = openWindow('<?php echo $window_title; ?>', '<?php echo $window_class; ?>', '<?php echo $window_icon; ?>', '<?php echo $window_type; ?>', '<?php echo $window_content; ?>', positions, c_links);
         });
     });

@@ -19,10 +19,10 @@
         <div class="icon_image"><img src="img/status.svg" alt="Status der Webseiten" style="width:100%;"/></div>
         <div class="icon_text">Status</div>
     </div>
-    <!-- div class="dash_icon icon_email">
+    <div id="emailicon" class="dash_icon icon_email">
         <div class="icon_image"><img src="img/mail-send.svg" alt="Schreib uns ne Email" style="width:100%;"/></div>
         <div class="icon_text">Email</div>
-    </div -->
+    </div>
     <div class="dash_icon icon_points">
         <div class="icon_image"><img src="img/points.png" alt="Anwendungen anzeigen" style="width:100%;"/></div>
         <div class="icon_text">Anwendungen</div>
