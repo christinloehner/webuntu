@@ -132,8 +132,22 @@ $( document ).ready(function() {
         window.location.href = "/";
     });
     $( "#dockclock" ).click(function() {
-        $('#dockclockwindow').toggle('fast');
+        if($("#dockclockwindow").is(":visible")) {
+            $('#dockclockwindow').fadeOut('fast');
+        } else {
+            $('#dockclockwindow').fadeIn('fast');
+        }
     });
+    var mouse_is_inside = false;
+    $('#dockclockwindow').hover(function(){
+        mouse_is_inside=true;
+    }, function(){
+        mouse_is_inside=false;
+    });
+    $("body").mouseup(function(){
+        if(!mouse_is_inside) $('#dockclockwindow').fadeOut('fast');
+    });
+
     $('body').on('click', '.window', function() {
         focus = focus + 1;
         $(this).css('zIndex', focus);
