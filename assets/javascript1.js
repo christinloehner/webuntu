@@ -122,15 +122,6 @@ $( document ).ready(function() {
 
 ///////////////////////////////////////////////////////////////////////////////
 
-    $(document).on("mouseup", "html", function(event) {
-        event.preventDefault();
-    });
-    $(document).on("mouseup", "body", function(event) {
-        event.preventDefault();
-    });
-    $(document).on("mouseup", "#desktop", function(event) {
-        event.preventDefault();
-    });
     $( ".icon_email" ).click(function() {
         window.location.href = "email.php";
     });
@@ -223,5 +214,17 @@ $( document ).ready(function() {
     });
     $("body").mouseup(function(){
         if(!mouse_is_inside_context) $('#context').hide();
+    });
+    $(document).on("mouseup", "html", function(event) {
+        event.preventDefault();
+    });
+    $(document).on("mouseup", "body", function(event) {
+        event.preventDefault();
+    });
+    $(document).on("mouseup", "#desktop", function(event) {
+        event.preventDefault();
+    });
+    $(document).on("contextmenu", ".window", function(event) {
+        event.preventDefault();
     });
 });

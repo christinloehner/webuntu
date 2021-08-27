@@ -28,6 +28,17 @@ $( document ).ready(function() {
             '-o-transform'      : 'rotate(' + hourDegrees + 'deg)',
             'transform'         : 'rotate(' + hourDegrees + 'deg)'
         });
+        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        var hrs = now.getHours();
+        var minutes = now.getMinutes();
+        var secs = now.getSeconds();
+        var month = now.getMonth();
+        var day = now.getDate();
+        hrs = hrs < 10 ? `0${hrs}` : hrs;
+        minutes = mins < 10 ? `0${minutes}` : minutes;
+        secs = secs < 10 ? `0${secs}` : secs;
+        var currenttime = day+". "+monthNames[month]+" "+hrs+":"+minutes+":"+secs;
+        $("#dockclock").text(currenttime);
     }
     setInterval(setDate, 1000);
     setDate();

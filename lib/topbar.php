@@ -2,7 +2,7 @@
     <div id="topleft">Aktivitäten</div>
     <div id="topmiddle">
         <span id="dockclock">
-			<?php echo date("d. M H:i"); ?>
+			<?php echo date("d. M H:i:s"); ?>
 		</span>
 		<div id="dockclockwindow">
 			<div class="clock">
