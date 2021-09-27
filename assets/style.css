@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 body {
-  background-image: url(/img/backgrounds/0.png);
+  background-image: url(../img/backgrounds/0.png);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
