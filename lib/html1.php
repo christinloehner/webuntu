@@ -2,12 +2,16 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<?php include('lib/config.php'); ?>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.typeit/4.3.0/typeit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.typeit/4.3.0/typeit.min.js"></script>
+    <script type="javascript">
+        var STARTPAGE_uri = '<?php echo $startpage_uri; ?>';
+    </script>
 	<script src="assets/javascript1.js"></script>
-	<?php include('lib/config.php'); ?>
+    <?php include('lib/windows.php'); ?>
 	<script src="assets/clock.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-calendar/dist/css/theme-basic.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-calendar/dist/css/theme-glass.css" />

@@ -18,13 +18,56 @@ function openWindow (title, id, icon, cssclass, content, positions, counter) {
     return [ counter, positions[0], positions[1] ];
 }
 
+function closeWindow (myid) {
+        if (myid == 'infowindow') { c_info = 0; var iconid = 'infoicon'; }
+        if (myid == 'linkswindow') { c_links = 0; var iconid = 'linksicon'; }
+        if (myid == 'camswindow') { c_cams = 0; var iconid = 'camsicon'; }
+        if (myid == 'statuswindow') { c_status = 0; var iconid = 'statusicon'; }
+        if (myid == 'impwindow') { c_imp = 0; var iconid = 'impicon'; }
+        if (myid == 'emailwindow') { c_email = 0; var iconid = 'emailicon'; }
+        $('#'+myid).fadeOut('slow');
+        $('#'+myid).remove();
+        $('#'+iconid).removeClass('active');
+}
+
+function minimizeWindow (myid) {
+        if (myid == 'infowindow') { var iconid = 'infoicon'; }
+        if (myid == 'linkswindow') { var iconid = 'linksicon'; }
+        if (myid == 'camswindow') { var iconid = 'camsicon'; }
+        if (myid == 'statuswindow') { var iconid = 'statusicon'; }
+        if (myid == 'impwindow') { var iconid = 'impicon'; }
+        if (myid == 'emailwindow') { var iconid = 'emailicon'; }
+        $('#'+myid).fadeOut('slow');
+        $("#minimized").removeClass('hidden');
+        $("#minimized").addClass('shown');
+        $('#'+iconid).toggleClass('minimized');
+}
+
+function closeAllWindows() {
+		var ids = $('#desktop .window').map(function(){
+			  return $(this).attr('id');
+		  }).get();
+		for (let i=0; i<ids.length; i++) {
+			closeWindow(ids[i]);
+		}
+}
+
+function minimizeAllWindows() {
+        var ids = $('#desktop .window').map(function(){
+              return $(this).attr('id');
+          }).get();
+        for (let i=0; i<ids.length; i++) {
+            minimizeWindow(ids[i]);
+        }
+}
+
 $( document ).ready(function() {
 
     $( ".icon_points" ).click(function() {
-        window.location.href = "/";
+		closeAllWindows();
     });
     $( ".icon_home" ).click(function() {
-        window.location.href = "/";
+		closeAllWindows();
     });
     $( "#dockclock" ).click(function() {
         if($("#dockclockwindow").is(":visible")) {
@@ -49,16 +92,7 @@ $( document ).ready(function() {
     });
     $('body').on('click', '.minimize', function() {
         var myid = $(this).parent().parent().parent().attr('id');
-        if (myid == 'infowindow') { var iconid = 'infoicon'; }
-        if (myid == 'linkswindow') { var iconid = 'linksicon'; }
-        if (myid == 'camswindow') { var iconid = 'camsicon'; }
-        if (myid == 'statuswindow') { var iconid = 'statusicon'; }
-        if (myid == 'impwindow') { var iconid = 'impicon'; }
-        if (myid == 'emailwindow') { var iconid = 'emailicon'; }
-        $('#'+myid).fadeOut('slow');
-        $("#minimized").removeClass('hidden');
-        $("#minimized").addClass('shown');
-        $('#'+iconid).toggleClass('minimized');
+		minimizeWindow(myid);
     });
     $( "#minimized" ).click(function() {
         var myid = $(this).parent().parent().parent().attr('id');
@@ -72,15 +106,7 @@ $( document ).ready(function() {
     });
     $('body').on('click', '.exit', function() {
         var myid = $(this).parent().parent().parent().attr('id');
-        if (myid == 'infowindow') { c_info = 0; var iconid = 'infoicon'; }
-        if (myid == 'linkswindow') { c_links = 0; var iconid = 'linksicon'; }
-        if (myid == 'camswindow') { c_cams = 0; var iconid = 'camsicon'; }
-        if (myid == 'statuswindow') { c_status = 0; var iconid = 'statusicon'; }
-        if (myid == 'impwindow') { c_imp = 0; var iconid = 'impicon'; }
-        if (myid == 'emailwindow') { c_email = 0; var iconid = 'emailicon'; }
-        $('#'+myid).fadeOut('slow');
-        $('#'+myid).remove();
-        $('#'+iconid).removeClass('active');
+		closeWindow(myid);
     });
     $('body').on('dblclick', '.titlebar', function() {
         $(this).parent().parent().parent().css("top", "");
