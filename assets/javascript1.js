@@ -69,6 +69,13 @@ $( document ).ready(function() {
     $( ".icon_home" ).click(function() {
 		closeAllWindows();
     });
+    $( ".icon_info" ).click(function() {
+		window.open(
+		  'https://github.com/christinloehner/webuntu',
+		  '_blank'
+		);
+    });
+
     $( "#dockclock" ).click(function() {
         if($("#dockclockwindow").is(":visible")) {
             $('#dockclockwindow').fadeOut('slow');
