@@ -36,6 +36,7 @@ function closeWindow (myid) {
         if (myid == 'statuswindow') { c_status = 0; var iconid = 'statusicon'; }
         if (myid == 'impwindow') { c_imp = 0; var iconid = 'impicon'; }
         if (myid == 'emailwindow') { c_email = 0; var iconid = 'emailicon'; }
+        if (myid == 'webbrowser') { c_browser = 0; var iconid = 'browsericon'; }
         $('#'+myid).fadeOut('slow');
         $('#'+myid).remove();
         $('#'+iconid).removeClass('active');
@@ -48,6 +49,7 @@ function minimizeWindow (myid) {
         if (myid == 'statuswindow') { var iconid = 'statusicon'; }
         if (myid == 'impwindow') { var iconid = 'impicon'; }
         if (myid == 'emailwindow') { var iconid = 'emailicon'; }
+        if (myid == 'webbrowser') { var iconid = 'browsericon'; }
         $('#'+myid).fadeOut('slow');
         $("#minimized").removeClass('hidden');
         $("#minimized").addClass('shown');
@@ -190,6 +192,14 @@ $( document ).ready(function() {
     $(document).on("contextmenu", ".window", function(event) {
         if(!mouse_is_inside_dialog) $('.dialog').hide();
         if(!mouse_is_inside_context) $('#context').hide();
+        event.preventDefault();
+    });
+    
+    $(document).on("submit", "#addressbar", function(event) {
+        if(!mouse_is_inside_dialog) $('.dialog').hide();
+        if(!mouse_is_inside_context) $('#context').hide();
+        var url = $('#addressbar').find('input[name="url"]').val();
+        $("#browserwindow").attr("src", url);
         event.preventDefault();
     });
     

@@ -7,6 +7,10 @@
         <div class="icon_image"><img src="img/gtk-about.svg" alt="Wer sind die Löhners?" style="width:100%;"/></div>
         <div class="icon_text">Info</div>
     </div>
+    <div id="browsericon" class="dash_icon icon_browser">
+        <div class="icon_image"><img src="img/webbrowser.svg" alt="Webbrowser" style="width:100%;"/></div>
+        <div class="icon_text">Webbrowser</div>
+    </div>
     <div id="linksicon" class="dash_icon icon_links">
         <div class="icon_image"><img src="img/files.svg" alt="Einige interessante Links" style="width:100%;"/></div>
         <div class="icon_text">Links</div>
