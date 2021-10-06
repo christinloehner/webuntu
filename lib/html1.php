@@ -11,7 +11,6 @@
         var STARTPAGE_uri = '<?php echo $startpage_uri; ?>';
     </script>
 	<script src="assets/javascript1.js"></script>
-    <?php include('lib/windows.php'); ?>
 	<script src="assets/clock.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-calendar/dist/css/theme-basic.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-calendar/dist/css/theme-glass.css" />
@@ -21,6 +20,7 @@
     <title>webuntu - An Ubuntu 21.04 Simulator</title>
 </head>
 <body>
+<?php include('lib/windows.php'); ?>
 <div id="context">
 	<ul>
 		<li class="item">Neuer Ordner</li>

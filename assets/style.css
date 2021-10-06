@@ -20,7 +20,7 @@ body {
   overflow: hidden;
 }
 .dash_icons {
-    z-index: 9997!important;
+    z-index: 7!important;
     position: absolute;
     top: 0;
     left: 0;
@@ -34,7 +34,7 @@ body {
 .dash_icon {
     width: 53px;
     height: 50px;
-    z-index: 9998;
+    z-index: 8;
     float: left;
     padding: 8px;
     clear: both;
@@ -213,23 +213,23 @@ span.welcome {
 }
 #terminal, .window {
     position: absolute!important;
-    z-index: 9;
+    z-index: 4;
 }
 #dialog {
   position: absolute;
-  z-index: 9;
+  z-index: 4;
 }
 .Dialog__Toolbar {
   padding: 10px;
   cursor: move;
-  z-index: 10;
+  z-index: 5;
 }
 #topbar {
     left: 0;
     top: 0;
     height: 25px;
     position: fixed;
-    z-index: 9999!important;
+    z-index: 9!important;
     width: 100%;
     text-align: right;
     color: #dedede;
@@ -254,21 +254,22 @@ div#topright {
     right: 20px;
     position: fixed;
     font-size: 0.9rem;
-    width: 130px;
+    width: 200px;
     text-align: right;
 }
 div#topbar > div {
     padding-top: 4px;
 }
 div#topright {
-    margin-top: 2px;
+    margin-top: 0;
+    padding-top: 0!important;
 }
 svg.svg-inline--fa {
     margin-left: 8px;
 }
 div#copyright {
     position: fixed;
-    z-index: 9999;
+    z-index: 9;
     bottom: 10px;
     right: 10px;
     color: #b1b1b1;
@@ -301,7 +302,7 @@ div.active:before {
     display: block!important;
 }
 .focus {
-    z-index: 10;
+    z-index: 6;
 }
 .maximized {
     top: 25px!important;
@@ -324,7 +325,7 @@ span#dockclock {
 }
 div#dockclockwindow {
     display: none;
-    z-index: 99999;
+    z-index: 10;
     width: 700px;
     height: 390px;
     border-radius: 15px;
@@ -432,6 +433,35 @@ li.item.inactive {
     height: 100%;
 }
 
+svg.svg-inline--fa {
+    margin-left: 0;
+    padding: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+    cursor: pointer;
+}
+svg.svg-inline--fa:hover {
+    background-color: #404040;
+}
+
+.dialog {
+    z-index: 12!important;
+    position: relative;
+}
+
+#optionswindow {
+    display: none;
+    z-index: 12!important;
+    width: 300px;
+    height: 300px;
+    top: 33px;
+    left: 0;
+    border: 1px solid #e1e1e1;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    position: relative;
+    padding: 10px;
+}
 
 
 

@@ -73,8 +73,6 @@ function minimizeAllWindows() {
 }
 
 $( document ).ready(function() {
-
-    openFullscreen();
     
     $( ".icon_points" ).click(function() {
 		closeAllWindows();
@@ -94,6 +92,14 @@ $( document ).ready(function() {
             $('#dockclockwindow').fadeOut('slow');
         } else {
             $('#dockclockwindow').fadeIn('slow');
+        }
+    });
+    $( "#options" ).click(function(event) {
+        if($("#optionswindow").is(":visible")) {
+            $('#optionswindow').fadeOut('fast');
+        } else {
+            $('#optionswindow').css("left", $("#desktop").innerWidth() - $('#optionswindow').width() - 28);
+            $('#optionswindow').fadeIn('fast');
         }
     });
     var mouse_is_inside = false;
@@ -141,6 +147,7 @@ $( document ).ready(function() {
     });
     $(document).on("contextmenu", "#desktop", function(event) {
         event.preventDefault();
+        $(".dialog").hide();
         if($("#context").is(":visible")) {
             $('#context').hide();
         } else {
@@ -149,6 +156,12 @@ $( document ).ready(function() {
         }
         event.preventDefault();
     });
+    var mouse_is_inside_dialog = false;
+    $('.dialog').hover(function(){
+        mouse_is_inside_dialog=true;
+    }, function(){
+        mouse_is_inside_dialog=false;
+    });
     var mouse_is_inside_context = false;
     $('#context').hover(function(){
         mouse_is_inside_context=true;
@@ -156,18 +169,29 @@ $( document ).ready(function() {
         mouse_is_inside_context=false;
     });
     $("body").mouseup(function(){
+        if(!mouse_is_inside_dialog) $('.dialog').hide();
         if(!mouse_is_inside_context) $('#context').hide();
     });
     $(document).on("mouseup", "html", function(event) {
+        if(!mouse_is_inside_dialog) $('.dialog').hide();
+        if(!mouse_is_inside_context) $('#context').hide();
         event.preventDefault();
     });
     $(document).on("mouseup", "body", function(event) {
+        if(!mouse_is_inside_dialog) $('.dialog').hide();
+        if(!mouse_is_inside_context) $('#context').hide();
         event.preventDefault();
     });
     $(document).on("mouseup", "#desktop", function(event) {
+        if(!mouse_is_inside_dialog) $('.dialog').hide();
+        if(!mouse_is_inside_context) $('#context').hide();
         event.preventDefault();
     });
     $(document).on("contextmenu", ".window", function(event) {
+        if(!mouse_is_inside_dialog) $('.dialog').hide();
+        if(!mouse_is_inside_context) $('#context').hide();
         event.preventDefault();
     });
+    
+    openFullscreen();
 });

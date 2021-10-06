@@ -22,11 +22,11 @@
 			<script src="assets/calendar.js"></script>
 		</div>
     </div>
-    <div id="topright" class="impressum">
+    <div id="topright">
         <i class="fas fa-bell"></i>
         <i class="fas fa-battery-three-quarters"></i>
         <i class="fas fa-volume-up"></i>
         <i class="fas fa-at"></i>
-        <i class="fas fa-angle-down"></i>
+        <a id="options"><i class="fas fa-angle-down"></i></a>
     </div>
 </div>
