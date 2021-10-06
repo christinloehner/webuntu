@@ -1,6 +1,17 @@
 var focus = 5;
 var positions = [165, 105];
 
+var elem = document.getElementById("webuntu");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
 function openWindow (title, id, icon, cssclass, content, positions, counter) {
     if (counter <= 0) {
         counter = 1;
@@ -63,6 +74,8 @@ function minimizeAllWindows() {
 
 $( document ).ready(function() {
 
+    openFullscreen();
+    
     $( ".icon_points" ).click(function() {
 		closeAllWindows();
     });
