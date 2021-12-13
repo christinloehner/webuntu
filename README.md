@@ -3,7 +3,7 @@ My private try to create a ubuntu like website with plain JS (without react or s
 
 *This is highly work in progress!* Please don't fork yet
 
-You can see it in action here: http://home.christin-loehner.de:81/webuntu/
+You can see it in action here: https://webuntu.r3y.de/
 
 **Screenshot**
 
